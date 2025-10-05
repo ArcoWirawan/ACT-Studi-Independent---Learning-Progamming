@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">device-width
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Tabel - ArwanzXP</title>
+</head>
+<style>
+    .table_3 {
+        border: red;
+        border-collapse: collapse;
+    }
+    .table_3 tr:hover {     /* ketika ditekan = menyala*/
+        background-color: bisque;
+
+    }
+    </style>
+<body>
+    
+
+<!-- 
+<th> tabel head
+<tr> tabel row
+<td> tabel column
+
+colspan = (num colummn)
+
+     -->
+<table border="1" style="border: red;">
+    <tr> <!-- Tabel Row-->
+        <th>No.</th> <!-- Tabel -->
+        <th colspan="2">Nama</th>
+    </tr>
+    <tr><!-- Tabel Row-->
+        <td>1.</td> <!-- Tabel Data -->
+        <td>Arco Wirawan</td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td>Muhammad Nauval</td>
+    </tr>
+</table>
+
+
+<h2>Latihan Tabel 1</h2>
+
+
+<h4>Tabel Data keuangan</h4>
+<table border="1">
+
+    <tr>
+        <th>No.</th>
+        <th >Nama Barang</th>
+        <th>Jumlah unit</th>
+        <th>Harga Satuan</th>
+        <th>Total</th>
+    </tr>
+    <tr>
+        <td>1.</td>
+        <td>Pulpen Joyco 0.3mm</td>
+        <td>10</td>
+        <td>5.000</td>
+        <td>50.000</td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td>Meja 120*60*60</td>
+        <td>10</td>
+        <td>300.000</td>
+        <td>3.000.000</td>
+    </tr>
+    
+</table>
+
+
+<h4>Latihan tabel 3</h4>
+<table class="table_3" border="1" cellspacing='10' cellpadding="10">
+    <tr>
+        <th>Pemograman</th>
+        <th>Framework</th>
+    </tr>
+    <TR>
+        <TD rowspan="2">PHP</TD> <!-- Merge cell for row (baris)-->
+        <td>Laravel</td>
+    </TR>
+    <tr>
+        <td>Codigniter</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Javascript</td>
+        <td>Node JS</td>
+    </tr>
+    <tr>
+        <td>Vue</td>
+    </tr>
+    <tr>
+        <td>React</td>
+    </tr>
+</table>
+
+</body>
+</html>
