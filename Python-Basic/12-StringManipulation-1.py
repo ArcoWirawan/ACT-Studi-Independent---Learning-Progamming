@@ -70,3 +70,5 @@ print(searchDataMin)
 # 8. ASSCI kode 
 ASSCI_kode = ord(" ")
 print(f"ASSCI kode untuk spasi = {ASSCI_kode}") # 
+
+# Testing ASSCI Kode
