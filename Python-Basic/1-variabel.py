@@ -4,7 +4,7 @@ var1 = 10
 var2 = 10
 
 print("Value var1 = ", var1)
-fa
+
 # Jenis Print
 
 # 1. Print Format (f"")

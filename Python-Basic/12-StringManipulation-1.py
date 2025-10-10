@@ -51,12 +51,22 @@ print(data01[-2]) # cetak huruf n
 # 5.2 Index start:stop
 # start = dihitung dari index number
 # stop = dihitung dari length number
-print(f"Nama dia = {data01[0:5]}")
+print(f"Nama dia = {data01[0:5]}\n")
 
 
 # 5.3 Index start:stop:step
 
-dataangka = 2,4,6,8,10
-print(dataangka[0:2:4])
+dataangka = [1, 2, 3, 4, 5]
+print(dataangka[1:2:3])
 
+# 6. max (nilai tertinggi)
+searchDataMax = max(dataangka)
+print(searchDataMax)
 
+# 7. min (nilai terkecil)
+searchDataMin = min(dataangka)
+print(searchDataMin)
+
+# 8. ASSCI kode 
+ASSCI_kode = ord(" ")
+print(f"ASSCI kode untuk spasi = {ASSCI_kode}") # 
