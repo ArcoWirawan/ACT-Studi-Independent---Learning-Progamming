@@ -11,4 +11,16 @@ for number in number_group:
 member = ["andi", "rahmat", "udin"]
 
 for mem in member:
-    print(f"{mem}")
+    print(f"name = {mem}")
+
+
+# for loop and range
+print("\nWhile loop")
+number = [10, 5, 20, 30]
+
+panjang = len(number)
+i = 0
+##
+for i in range(panjang):
+    print(f"angka = {number[i]}")
+
