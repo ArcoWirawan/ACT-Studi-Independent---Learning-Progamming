@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.r-ujian {
+    width: 100%;
+    border-collapse:collapse;  /* boat border supaya tidak seperti bingkai*/
+    height: 50%;
+}
+
+</style>
+<body>
+    <h1>Arwanzxp - Tabel Exam</h1>
+
+
+ <!-- Urutan
+  1. Tabel row
+  2. tabel data
+  3. tabel head (pengganti td untuk header column) 
+  4. 
+  -->
+
+<!-- Pembuatan Tabel dengan
+ 1. nama = nama lengkap dan nickname
+ 2. kelas (kampus) 
+ 
+ Solution = set colspan to Name column
+ -->
+<table border="1" >      
+      <tr> 
+          <th colspan="2">Nama</th>
+          <th>Kelas</th>
+        </tr>
+        <tr>
+            <td>Arco Wirawan</td>
+            <td>Arwanzxp</td>
+            <td>1TPLM004</td>
+        </tr>
+        <tr>
+            <td>Ridwan</td>
+            <td>Ridzz</td>
+            <td>1TPML005</td>
+        </tr>
+</table>
+
+<!-- Pembuatan tabel ruang ujian per matkul
+    1. no ruangan
+    2. mata kuliah
+
+    solution = use rowspan function in mata kuliah column
+-->
+
+<br>
+<br>
+
+    <table class="r-ujian" border="1">
+        <tr>
+
+            <th>No. Ruang</th>
+            <!-- Karena setiap mata kuliah ada 3 ruang, jadinya rowspan = 3 -->
+            <th rowspan="">Mata Kuliah</th>
+        </tr>
+        <TR>
+           <td>v.104</td>
+           <td rowspan="3">PKN</td>
+        </TR>
+        <tr>
+            <td>v.105</td>
+        </tr>
+        <tr>
+            <td>v.106</td>
+        </tr>
+    
+    </table>
+
+
+<br>
+
+
+</body>
+</html>
