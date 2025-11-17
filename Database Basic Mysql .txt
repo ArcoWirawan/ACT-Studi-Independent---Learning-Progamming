@@ -1,0 +1,16 @@
+ 1. Buat database - CREATE DATABASE namadb;
+ 2. Lihat Database - SHOW DATABASES;
+ 3. Operasikan database - USE namadb;
+ 4. Buat Tabel - CREATE TABLE namatb ( col1 datatype(count), col2 datatype(count) etc..., dst ); 
+ Disesuaikan dengan banyak kolom yang ingin dibuat
+ 5. Lihat Config Tabel : DESCRIBE namatb;
+ 
+ 
+ 
+ *** Edit Tabel :
+ ALTER TABLE dataMhs
+    1. Ubah Nama Tabel -> RENAME TO Mahasiswa;
+    2. Menambah kolom -> ADD COLUMN (column) (datatype);
+    
+    
+

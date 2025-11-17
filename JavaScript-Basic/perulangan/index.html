@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perulangan Javascript</title>
+</head>
+<body>
+    <h1>Loop in Javascript Langueage</h1>
+    <br>
+    <div id="lihat"></div>
+    
+<script>
+    var outputDisplay = "" // deklarasi var dulu
+    for(x=1; x <= 5; x++){ // var x :1; x kurang sama dengan 5; x bertambah terus
+    
+    outputDisplay += "Angka adalah = " +  x + "<br>"; // isi dari variabel
+    
+    // ambil elemnt div dengan memanggil id nya
+    document.getElementById("lihat").innerHTML = outputDisplay; 
+    }
+
+    //
+
+    // 2. While loop
+    x = 0 // deklarasi var dulu
+    while (x <= 5){ // ketika x <= 5
+        console.log(x) // cetak var x
+        x++ // x bertambah
+    }
+
+    console.log
+    // 3. do while
+
+    y = 0
+    do {
+        console.log("do while = ", y)
+        y++
+    } while (y < 5)
+
+</script>
+</body>
+</html>

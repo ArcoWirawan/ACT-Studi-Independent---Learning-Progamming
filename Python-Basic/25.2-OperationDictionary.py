@@ -36,6 +36,6 @@ tongki_cafe["wan"] = "Arco Wirawan"
 print(tongki_cafe["wan"])
 
 # delete data
-del tongki_cafe["wen"]
+del tongki_cafe["wen"] 
 print(tongki_cafe) # data wendi ilang
 
