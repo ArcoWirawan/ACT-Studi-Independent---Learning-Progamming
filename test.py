@@ -25,20 +25,25 @@
 # }
 
 
-listMenu = """
-LIST MENU MAKANAN
+# listMenu = """
+# LIST MENU MAKANAN
 
-1. Ayam Goreng = 15.0000
-1
-"""
-print(listMenu)
+# 1. Ayam Goreng = 15.0000
+# 1
+# """
+# print(listMenu)
 
-inputPilihanMakanan = int(input("Pilih Makanan [1/2/3]"))
-quantit
+# inputPilihanMakanan = int(input("Pilih Makanan [1/2/3]"))
+# quantit
 
-# if inputPilihanMakanan == 1:
-#     harga = 15.000
-# elif inputPilihanMakanan == 2:
+# # if inputPilihanMakanan == 1:
+# #     harga = 15.000
+# # elif inputPilihanMakanan == 2:
     
-print('\n')
+# print('\n')
     
+data = {
+    'name':'arwanzxp'
+}
+
+print(dir(data))

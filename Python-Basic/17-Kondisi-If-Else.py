@@ -1,12 +1,10 @@
-## 
-
-
 # if code one line
 
 if 1 == 1: print("Benar")
 else: print("Tidak sama")
 
 print("\n")
+
 # 2. if identitation
 name = "Arco Wirawan"
 if name == name:

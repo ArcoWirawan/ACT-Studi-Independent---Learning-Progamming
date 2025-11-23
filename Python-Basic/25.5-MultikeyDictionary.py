@@ -1,6 +1,6 @@
 import datetime
 
-
+# setiap variabel ini berisi data mahasiswa
 mhs_1 = {
     'nama':'Arco Wirawan',
     'nim':298399,
@@ -23,7 +23,7 @@ mhs_3 = {
     'lahir':datetime.datetime(2007, 1, 1)
 }
 
-# kumpulan data setiap mahasiswa
+# kumpulan data setiap mahasiswa, dengan kode mahasiswa berikut
 mhs_data = {
     'MHS01':mhs_1,
     'MHS02':mhs_2,
@@ -31,7 +31,8 @@ mhs_data = {
 }
 
 # buat header tabel sederhana
-# :<(number) = mengatur range columnnya
+
+# :<(number) = mengatur range columnnya >> ini adalah aturan tampilan dalam CMD
 print(f"{'Key':<10} {'nama':<20} {'SKS':<5} {'Beasiswa':<9} {'Lahir':<12}")
 print("-"*50)
 
@@ -42,6 +43,13 @@ for mhs in mhs_data:
     # 2. panggil identifier (mhs_data) lalu panggil key yang terdapat di dalam var (mhs_num)
     NAMA = mhs_data[KEY]['nama']    
     SKS = mhs_data[KEY]['sks-lulus']
-    print(f"{KEY:<10} {NAMA:<20} {SKS:<5}")
+    BEASISWA = mhs_data[KEY]['beasiswa']
+    TTL = mhs_data[KEY]['lahir'].strftime("%x")
+    
+    
+    ## < = mendorong ke kiri
+    ## < = mendorong ke kanan
+    ## ^ = menempatkan ke tengah
+    print(f"{KEY:<10} {NAMA:<20} {SKS:<5} {BEASISWA:^9} {TTL:<12}")
 
 

@@ -4,13 +4,85 @@
  4. Buat Tabel - CREATE TABLE namatb ( col1 datatype(count), col2 datatype(count) etc..., dst ); 
  Disesuaikan dengan banyak kolom yang ingin dibuat
  5. Lihat Config Tabel : DESCRIBE namatb;
+ 6. Lihat Proses Buat Tabel : SHOW CREATE TABLE warga;
+
  
  
  
  *** Edit Tabel :
- ALTER TABLE dataMhs
+ Command Utama >> ALTER TABLE dataMhs;
+ Dan dibawahnya anda dapat memilih command berikut
     1. Ubah Nama Tabel -> RENAME TO Mahasiswa;
     2. Menambah kolom -> ADD COLUMN (column) (datatype);
+    3. Membuang Tabel -> DROP TABLE (nametb);
+    4. 
     
     
+*** Memberikan Primary Key
+- Cara 1 : memberikan primary key untuk column tertentu
+MariaDB [arwanzxp_learn]> CREATE TABLE member (
+    -> id INT NOT NULL AUTO_INCREMENT,
+    -> name VARCHAR(100) NOT NULL,
+    -> PRIMARY KEY(id)
+    -> );
 
+- Cara 2 : Memberikan Secara langsung pada column
+MariaDB [arwanzxp_learn]> CREATE TABLE member2 ( 
+    -> id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    -> name VARCHAR(150)
+    -> );
+
+MariaDB [arwanzxp_learn]> DESCRIBE member2;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(150) | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+2 rows in set (0.011 sec)
+
+- Menghapus Primary Key
+
+Apa Itu Primary Key? 🔑
+
+Primary Key adalah satu kolom (atau gabungan kolom) yang berfungsi sebagai identitas unik untuk setiap baris data.
+
+Hukum alam Primary Key ada dua:
+
+    UNIQUE (Unik): Nggak boleh ada dua data yang punya nilai yang sama di kolom ini. (Misal: NIK KTP. Nggak mungkin ada dua orang Indonesia yang NIK-nya sama persis).
+
+    NOT NULL (Nggak Boleh Kosong): Wajib diisi. Nggak boleh ada data tanpa identitas.
+
+Contoh di tabel Mahasiswa:
+
+    nama: Bisa kembar (Budi Santoso ada banyak).
+
+    jurusan: Bisa kembar (Anak TI ada banyak).
+
+    nim (Nomor Induk Mahasiswa): Harus unik. Satu NIM cuma buat satu orang. Inilah kandidat terbaik buat jadi Primary Key.
+
+
+*** HAPUS PRIMARY KEY
+ALTER TABLE namedb DROP PRIMARY KEY;
+
+Pastikan tidak ada AUTO INCREMENT nyangkut
+Jika ada : ALTER TABLE namedb MODIFY nama_column datatype(max);
+
+- Membuat Unique Table
+tambahkan Query : UNIQUE KEY(nama_column);
+Note : Harus ada column yang menggunakan PRIMARY KEY (supaya setiap data tidak sam aniknya)
+
+MariaDB [arwanzxp_learn]> CREATE TABLE warga (
+    -> id INT NOT NULL AUTO_INCREMENT,
+    -> nama VARCHAR(100) NOT NULL,
+    -> nik INT(50) NOT NULL,
+    -> PRIMARY KEY(id), # kolom id harus unik sebagai identitas urut warga # 
+    -> UNIQUE KEY(nik) # berikan NIK supaya unik setiap nomornya #
+    -> );
+Query OK, 0 rows affected (0.021 sec)
+
+- Menghapus UNIQUE KEY
+DROP TABLE nametab DROP INDEX nameColumn;
+
+
+*** Foreign Key
