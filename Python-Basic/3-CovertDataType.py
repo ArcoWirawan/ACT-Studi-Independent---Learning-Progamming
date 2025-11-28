@@ -1,4 +1,4 @@
-# gunakan fungsi type('data') untuk mengetahui data type pada var
+3# gunakan fungsi type('data') untuk mengetahui data type pada var
 
 # 1. Contoh langsung ke data float aja
 print("+++ Float +++")

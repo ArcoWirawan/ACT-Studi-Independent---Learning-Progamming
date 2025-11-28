@@ -42,8 +42,26 @@
     
 # print('\n')
     
-data = {
-    'name':'arwanzxp'
-}
+# data = {
+#     'name':'arwanzxp'
+# }
 
-print(dir(data))
+# print(dir(data))
+
+
+
+name = "aarwannzxp"
+division = "Network Engineer"
+
+## ubah variabel global di dalam function
+def MySelf(new_name,  new_division):
+    # 1. global = memberikan izin untuk mengubah variabel di luar fungsi
+    global name
+    global division
+    
+    # 2. ubah isi variabel dengan isi dari parameter
+    name = new_name
+    division = new_division
+    
+    print(f"{name} - {division}")
+    

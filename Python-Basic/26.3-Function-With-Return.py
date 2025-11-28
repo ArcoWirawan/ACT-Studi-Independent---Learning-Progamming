@@ -67,8 +67,8 @@ def katakan_pagi(nama="aarwannzxp"):
     print(f"Selamat Pagi, {nama}")
     
     
-katakan_pagi()
+katakan_pagi() # Selamat Pagi, kii
 
 # kita dapat mengubah isi argument
 
-katakan_pagi(nama="kii")
+katakan_pagi(nama="kii") # Selamat Pagi, kii
